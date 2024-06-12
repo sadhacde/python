@@ -1,3 +1,4 @@
+# lists needed for hangman_game.py
 logo = ''' 
  _                                             
 | |                                            
