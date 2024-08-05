@@ -1,7 +1,13 @@
 """
 guess the U.S. states game. continues until all states are guessed
 unless player types "exit" which then displays list of states that
-were not guessed in a csv file of all
+were not guessed in a csv file, states_to_learn.csv
+
+50_states.csv contains all states with their x, y coordinates 
+where the state's name should be displayed upon a correct guess
+
+blank_states_img.gif is the image of the U.S.A map used for gameplay
+
 """
 
 import pandas as pd
