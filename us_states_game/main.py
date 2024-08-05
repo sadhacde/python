@@ -34,10 +34,7 @@ while len(correct_guesses) < 50:
                              prompt="What's another state's name?").title()
 
     if guess.lower() == "exit":  # creates new csv file with states that weren't guessed
-        missed_states = []
-        for state in states:
-            if state not in correct_guesses:
-                missed_states.append(state)
+        missed_states = [state for state in states if state not in correct_guesses]
         df = pd.DataFrame(missed_states)
         df.to_csv("states_to_learn.csv")
         break
