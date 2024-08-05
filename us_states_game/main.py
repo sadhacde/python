@@ -48,3 +48,4 @@ while len(correct_guesses) < 50:
             t.goto(state_data.x.item(), state_data.y.item())
             t.write(guess, font=FONT)
             correct_guesses.append(guess)
+            
