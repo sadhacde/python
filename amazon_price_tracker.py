@@ -11,7 +11,12 @@ import os
 
 url= "https://www.amazon.com/Roche-Posay-Toleriane-Double-Repair-Moisturizer/dp/B01N9SPQHQ/ref=sr_1_1?dib=eyJ2IjoiMSJ9.nnNB8BwjB2cid_Anzc0NHddlTkPEh1mmSMn8Ym6uJktFuUJgfdkszSx8e36aegRTNDIwrHJeqAjhbcU1jVal-TelfoCVRFebDwoLphqv6QTc5wUQLX_bRls2raGBOL2WOZQbo9z5H75Qar5BDi1zjiHTSn_2zTOYOtJ5V2P7XG65lkNk8aA9FYQ9hRFRYj2qNKyhV9JBne7g7pJFUL4k-KEmVkoiKDRllbS7NK_KKyDPGNEHRyxlG2Y1D552MWBMJWv4gIUm9XUcZXKhT1D780oQcqgO_1fXKUOSTL1EH5o.o3-dt-ZuE9VHvjuFm3IYGXtYSQB_1Rr2Jj6XO1WxxPM&dib_tag=se&hvadid=697549558517&hvdev=c&hvlocphy=9026804&hvnetw=g&hvqmt=b&hvrand=8062968110715955306&hvtargid=kwd-960425568615&hydadcr=27504_14522349&keywords=la+roche+posay+double+moisturizer&qid=1726757944&sr=8-1"
 
-response = requests.get(url)
+header = {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36",
+    "Accept-Language": "en-GB,en-US;q=0.9,en;q=0.8"
+}
+
+response = requests.get(url, headers=header)
 moisturizer = response.text
 
 soup = BeautifulSoup(moisturizer, "html.parser")
