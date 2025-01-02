@@ -49,5 +49,3 @@ board[6][4] = PAWN
 board[6][5] = PAWN
 board[6][6] = PAWN
 board[6][7] = PAWN
-
-print(board)
